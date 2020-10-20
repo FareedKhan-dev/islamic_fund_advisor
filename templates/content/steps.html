@@ -1,0 +1,60 @@
+<!-- steps to follow -->
+<div class="container" id="steps">
+  <h1 class="color-dark font-weight-bold text-center">
+    STEPS TO <span class="color-light"> FOLLOW</span>
+  </h1>
+
+  <!-- first step -->
+  <div class="row my-5 justify-content-center">
+    <div class="col-lg-4 col-md-5 order-1">
+      <img src="../../static/pic1.jpg" style="border: 1px solid #26cfc2;" class="w-100 rounded" alt="Responsive image">
+    </div>
+    <div class="col-lg-6 col-md-7 col-sm-12 align-self-center py-3 pt-md-0 px-3 order-12">
+      <div class="card-block px-3">
+        <h1 class="card-title font-weight-medium">STEP 1</h1>
+        <p class="card-text">First you have to create an account on our Website. This step is mandatory for users in
+          order to move to next steps.</p>
+        <p style="background-color: #E12B56;" class="text-white text-left btn btn-sm p-2 px-2">
+          GMAIL ACCOUNT IS REQUIRED</p> <br>
+        {% if log_in == 'log_out' %}
+        <button class="My-Button-see-live rounded btn-md px-4 text-left mt-md-0 mt-2 p-2"><a href="../auth/signup">Get
+            Started
+          </a>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- second step -->
+  <div class="row my-5 justify-content-center">
+    <div class="col-lg-4 col-md-5 order-md-12 order-1">
+      <img src="../../static/pic2.jpg" style="border: 1px solid #26cfc2;" class="w-100 rounded" alt="Responsive image">
+    </div>
+    <div class="col-lg-6 col-md-7 col-sm-12 align-self-center py-3 pt-md-0 px-3 order-md-1 order-12">
+      <div class="card-block px-3">
+        <h1 class="card-title font-weight-medium">STEP 2</h1>
+        <p class="card-text color-dark">Fill our Investor Profile Questionnaire which will identify the risk profile
+          based on the
+          answers you have filled.</p>
+        <p class="bgc-light text-white text-left btn btn-sm p-2 px-2">
+          NO PRIOR FINANCIAL KNOWLEDGE IS REQUIRED</p>
+      </div>
+    </div>
+  </div>
+  <!-- third step -->
+  <div class="row my-5 justify-content-center">
+    <div class="col-lg-4 col-md-5 order-1">
+      <img src="../../static/pic3.jpg" style="border: 1px solid #26cfc2;" class="w-100 rounded" alt="Responsive image">
+    </div>
+    <div class="col-lg-6 col-md-7 col-sm-12 align-self-center py-3 pt-md-0 px-3 order-12">
+      <div class="card-block px-3">
+        <h1 class="card-title font-weight-medium">STEP 3</h1>
+        <p class="card-text">And here is the Dashboard which will display the fund in which you should invest and also
+          displaying your risk profile.</p>
+        <p class="bgc-light text-white text-left btn btn-sm p-2 px-2">
+          NO PRIOR FINANCIAL KNOWLEDGE IS REQUIRED</p>
+      </div>
+    </div>
+  </div>
+</div>

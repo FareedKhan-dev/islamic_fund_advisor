@@ -1,0 +1,51 @@
+{% include 'header_footer/header_form.html' %}
+
+<div class="container-fluid high-me">
+  <h1 class="display-3 text-center text-white font-weight-bold ">
+    IMFA.
+  </h1>
+  <div class="signup-form form-me">
+    <form action="../profile/success" method="POST" class="form-horizontal">
+      <div class="row">
+        <div class="col-12  text-center">
+          <h2>SIGN UP</h2>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-md-4 col-12">Username</label>
+        <div class="col-md-8 col-12">
+          <input type="text" placeholder="Jhon Doe" class="form-control" name="username" required="required">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-md-4 col-12">Email Address</label>
+        <div class="col-md-8 col-12">
+          <input type="email" class="form-control" placeholder="example@gmail.com" name="email" required="required" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-md-4">Password</label>
+        <div class="col-md-8 col-12">
+          <input type="password" placeholder="At least 5 or more characters" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-md-4 col-12">Confirm Password</label>
+        <div class="col-md-8 col-12">
+          <input type="password" class="form-control" name="confirm_password" required="required">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-8 col-12 text-center text-md-left  offset-md-4 offset-0">
+          <button type="submit" class="btn btn-lg text-white font-weight-medium">SIGN UP</button>
+        </div>
+      </div>
+      <div class="text-center">Already have an account? <a href="../auth/login">Login here</a></div>
+    </form>
+
+  </div>
+</div>
+
+
+
+{% include 'header_footer/footer.html' %}

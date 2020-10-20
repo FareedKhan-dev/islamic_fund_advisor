@@ -1,0 +1,413 @@
+{% include 'header_footer/dashboard_head.html' %}
+<!-- Page Wrapper -->
+{% if fill_survey == "true" %}
+<div id="wrapper">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <div class="container-md">
+                    <a class="navbar-brand color-dark font-weight-bold" style="font-size: 30px; font-weight: 900px;">
+                        IMFA.
+                    </a>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ username }}</span>
+                                <i class="fa fa-user-circle mr-2 " style="font-size: 30px; color: #26cfc2;"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../">
+                                    <i class="fa fa-address-card fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Home
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../profile/questionnaire">
+                                    <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Questionnaire
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../logout" data-toggle="modal"
+                                    data-target="#logoutModal">
+                                    <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+
+            <div class="container-md">
+
+                <div id="report">
+
+                    <div class=" mb-4">
+                        <div class="row">
+                            <div style="background-color: #26cfc2;"
+                                class="col-md-3 rounded-left shadow text-white  shadow d-flex align-items-center">
+                                <h1 class="text-center w-100 font-weight-bold px-0 py-2">WHO ARE YOU?</h1>
+                            </div>
+                            <div
+                                class="col-md-9 text-md-left rounded-right text-center bg-white shadow  text-gray-800  p-4 ">
+                                <h1 class="h4" style="font-weight: 600;">{{ username }}</h1>
+
+                                <!-- Conservative -->
+                                {% if ( ((time_horizon >=3 and time_horizon <= 4.8) and (risk_and_objective >= 6 and risk_and_objective <= 16.8)) or ((time_horizon >=4.9 and time_horizon <= 6.6) and (risk_and_objective >= 6 and risk_and_objective <= 9.6))) %}
+                                <p>Conservative investors have Low risk tolerance. He seek low volatility
+                                    and
+                                    a steady
+                                    average rate of return. He focuses entirely on the preservation of capital and income generation.</p>
+                                {% endif %}
+
+                                <!-- moderately Conservative -->
+                                {%  if ( ((time_horizon >=4.9 and time_horizon <= 6.6) and (risk_and_objective >= 9.7 and risk_and_objective <= 16.8)) or ((time_horizon >=6.7 and time_horizon <= 8.4) and (risk_and_objective >= 6 and risk_and_objective <= 13.2)) or ((time_horizon >= 8.5 and time_horizon <= 10.2) and (risk_and_objective >= 6 and risk_and_objective <= 9.6))) %}
+                                <p>This investor will have a slightly higher risk tolerance than the most
+                                    conservative
+                                    investors. Investors seek potential returns above the average targeted return from a fixed-income
+                                    portfolio. The
+                                    main objective of this investor is to preserve capital.</p>
+                                {% endif %}
+
+                                <!-- moderate -->
+                                {% if (  ((time_horizon >=3 and time_horizon <= 4.8) and (risk_and_objective >= 16.9 and risk_and_objective <= 24)) or ((time_horizon >= 10.2 and time_horizon <= 12) and (risk_and_objective >= 6 and risk_and_objective <= 13.2))     or   ((time_horizon >=4.9 and time_horizon <= 6.6) and (risk_and_objective >= 16.9 and risk_and_objective <= 20.4)) or ((time_horizon >= 6.7 and time_horizon <= 8.4) and (risk_and_objective >= 13.3 and risk_and_objective <= 16.8)) or ((time_horizon >= 8.5 and time_horizon <= 10.2) and (risk_and_objective >= 9.7 and risk_and_objective <= 16.8)) or ((time_horizon >= 8.5 and time_horizon <= 10.2) and (risk_and_objective >= 9.7 and risk_and_objective <= 16.8))  ) %}
+                                <p>This investor have moderate risk tolerance and he will remain cautious
+                                    towards
+                                    taking
+                                    high levels of long-term risks. Investors seek above average returns with increased volatility.The
+                                    main
+                                    objective
+                                    of this investor on the income generation and capital appreciation.</p>
+                                {% endif %}
+
+                                <!-- moderately aggressive -->
+                                {%  if ( ((time_horizon >=4.9 and time_horizon <= 6.6) and (risk_and_objective >= 20.5 and risk_and_objective <= 24)) or ((time_horizon >= 6.7 and time_horizon <= 8.4) and (risk_and_objective >= 16.9 and risk_and_objective <= 20.4)) or ((time_horizon >= 8.5 and time_horizon <= 10.2) and (risk_and_objective >= 16.9 and risk_and_objective <= 20.4)) or ((time_horizon >= 10.2 and time_horizon <= 12) and (risk_and_objective >= 13.2 and risk_and_objective <= 16.8))   ) %}
+                                <p>Investor with a relatively high tolerance for risk. This investor seek
+                                    high
+                                    potential
+                                    returns with the expectation of significant volatility in any given year. The main objective of this
+                                    profile is
+                                    capital appreciation</p>
+                                {% endif %}
+
+                                <!-- aggressive -->
+                                {% if ( ((time_horizon >=3 and time_horizon <= 4.8) and (risk_and_objective >= 6 and risk_and_objective <= 16.8)) or ((time_horizon >=4.9 and time_horizon <= 6.6) and (risk_and_objective >= 6 and risk_and_objective <= 9.6))) %}
+                                <p>This type of investor can tolerate the risk of very high capital losses
+                                    over the
+                                    long term. Investors seek the greatest potential return with the possibility of extreme volatility.
+                                    The
+                                    main
+                                    objective of this investor on the capital appreciation</p>
+                                {% endif %}
+                                <!-- <button style="border: none !important;" class="My-Button-see-live rounded btn-sm px-4 text-left text-white mt-md-0 mt-2 p-2 change-button ">
+                      <a id="download_button" onclick="myFunction()">Generate Report</a>
+                    </button> -->
+                                <button
+                                    class="My-Button-see-live size-me-2 rounded btn-md px-4 text-left mt-md-0 mt-2 p-2 change-button ml-1"
+                                    type="button"><a id="download_button" onclick="myFunction()">Generate
+                                        Report</a></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Heading -->
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs    mb-1">{{ fund1 }}</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3  text-gray-800">{{ value1 }}%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-warning" role="progressbar"
+                                                            style="width: {{value1}}%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs    mb-1">{{ fund2 }}</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3  text-gray-800">{{ value2 }}%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                            style="width: {{value2}}%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs   mb-1">{{ fund3 }}</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3  text-gray-800">{{ value3 }}%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            style="width: {{value3}}%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs    mb-1">{{ fund4 }}
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3  text-gray-800">{{ value4 }}%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: {{value4}}%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Row -->
+
+                <div class="row">
+
+                    <!-- Area Chart -->
+                    <div class="col-xl-8 align-self-center col-lg-7">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 text-dark">Weights Allocation</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <h6 class=" ">{{ fund1 }}<span class="float-right">{{ value1 }}%</span></h6>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ value1 }}%"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class=" ">{{ fund2 }}<span class="float-right">{{ value2 }}%</span></h6>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: {{ value2 }}%"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class=" ">{{ fund3 }} <span class="float-right">{{ value3 }}%</span></h6>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ value3 }}%"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class=" ">{{ fund4 }}<span class="float-right">{{ value4 }}%</span></h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ value4 }}%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-normal text-dark">Pie Chart</h6>
+                                <div class="dropdown no-arrow">
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Fund Advisor 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    
+    <!-- End of Content Wrapper -->
+
+</div>
+{% else %}
+
+<div id="wrapper">
+
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <div class="container-md">
+                    <a class="navbar-brand color-dark font-weight-bold" style="font-size: 30px; font-weight: 900px;">
+                        IMFA.
+                    </a>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ username }}</span>
+                                <i class="fa fa-user-circle mr-2 " style="font-size: 30px; color: #26cfc2;"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../">
+                                    <i class="fa fa-address-card fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Home
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../profile/questionnaire">
+                                    <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Questionnaire
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../logout" data-toggle="modal"
+                                    data-target="#logoutModal">
+                                    <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+
+            <div class="container-md text-dark text-center">
+                <h1>{{username}}</h1>
+                <h4>You have to fill our questionnaire in order to generate your portfolio</h4>
+                <button class="My-Button-see-live rounded btn-lg px-4 text-left mt-md-0 mt-2 p-2 change-button"><a
+                    href="../profile/questionnaire">Fill the Questionnaire
+                  </a>
+                </button>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Fareed Khan 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+
+{% endif %}
+
+
+
+<!-- End of Page Wrapper -->
+{% include 'header_footer/dashboard_footer.html' %}

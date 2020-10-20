@@ -1,0 +1,314 @@
+{% include 'header_footer/questionnaire_head.html' %}
+
+<form id="msform" method="POST" action="../profile/dashboard">
+
+    <fieldset class="rounded">
+        <h3 class="fs-title">Number of Dependents in your family?</h3>
+        <input class="inputing" type="number" name="Dependents" placeholder="Family Members" /> <br>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+
+    <fieldset class="rounded">
+        <h2 class="fs-title">What is your current status of employment?</h2>
+        <div class="radio-list-left">
+            <dd>
+                <input type="radio" name="pq1" id="pq1-1" value="Employed">
+                <label for="pq1-1">Employed</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq1" id="pq1-2" value="Unemployed">
+                <label for="pq1-2">Unemployed</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq1" id="pq1-3" value="Self-employed">
+                <label for="pq1-3">Self-employed</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq1" id="pq1-4" value="Retired">
+                <label for="pq1-4">Retired</label>
+            </dd>
+        </div>
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+
+    <fieldset class="rounded">
+        <h2 class="fs-title">What is your age?</h2>
+
+        <dl class="radio-list-left">
+            <dd>
+                <input type="radio" name="david1" id="david1-1" value="4">
+                <label for="david1-1">Less than 19</label>
+            </dd>
+            <dd>
+                <input type="radio" name="david1" id="david1-2" value="3">
+                <label for="david1-2">20-30</label>
+            </dd>
+            <dd>
+                <input type="radio" name="david1" id="david1-3" value="2">
+                <label for="david1-3">31-45</label>
+            </dd>
+            <dd>
+                <input type="radio" name="david1" id="david1-4" value="1">
+                <label for="david1-4">46 and over</label>
+            </dd>
+        </dl>
+
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+
+    <fieldset class="rounded">
+        <h2 class="fs-title">What is the primary purpose of investment ?</h2>
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq3" id="pq3-1" value="2">
+                <label for="pq3-1">Retirement planning (It refers to the allocation of savings or
+                    revenues for
+                    retirements)</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq3" id="pq3-2" value="3">
+                <label for="pq3-2">Wealth accumulation (You want to ensure that the value of your assets
+                    gradually increase over
+                    time)</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq3" id="pq3-3" value="4">
+                <label for="pq3-3">Income and Capital Growth (To generate the highest possible income
+                    and capital)</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq3" id="pq3-4" value="1">
+                <label for="pq3-4">Wealth preservation (You want to ensure that the value of your assets
+                    does not
+                    decrease</label>
+            </dd>
+        </dl>
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    
+    <fieldset class="rounded">
+        <h2 class="fs-title">For how many years do you want to invest?</h2>
+        <input class="inputing" type="number" name="time_frame" placeholder="In number" />
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    <fieldset class="rounded">
+        <h2 class="fs-title">What is your estimated net worth? (PKR)</h2>
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq4" id="pq4-1" value="1">
+                <label for="pq4-1">Less than 10,000</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq4" id="pq4-2" value="2">
+                <label for="pq4-2">10,000 - 30,000</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq4" id="pq4-3" value="3">
+                <label for="pq4-3">30,000– 70,000</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq4" id="pq4-4" value="4">
+                <label for="pq4-4">More than 70,000</label>
+            </dd>
+        </dl>
+
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    <fieldset class="rounded">
+        <h2 class="fs-title">Suppose you invested PKR 10,000 and plan to keep it for 10 years. After 1
+            year, your investment declined by
+            20%. What would you do?</h2>
+
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq5" id="pq5-3" value="1">
+                <label for="pq5-3">Sell all the remaining balance</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq5" id="pq5-2" value="2">
+                <label for="pq5-2">Sell a portion of the remaining investment</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq5" id="pq5-4" value="3">
+                <label for="pq5-4">Hold investment, sell nothing</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq5" id="pq5-1" value="4">
+                <label for="pq5-1">Buy More</label>
+            </dd>
+        </dl>
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    <fieldset class="rounded">
+        <h2 class="fs-title">You have just received a large amount of money. How would you invest it?</h2>
+
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq6" id="pq6-1" value="3">
+                <label for="pq6-1">I would invest in something that offered high total return (current income plus
+                    capital
+                    appreciation) with a moderately high amount of risk</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq6" id="pq6-2" value="1">
+                <label for="pq6-2">I would invest in something that offered moderate current income and was very
+                    conservative</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq6" id="pq6-3" value="2">
+                <label for="pq6-3">I would invest in something that offered high current income with a moderate amount
+                    of
+                    risk</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq6" id="pq6-4" value="4">
+                <label for="pq6-4">I would invest in something that offered substantial capital appreciation even though
+                    it has
+                    a high amount of risk</label>
+            </dd>
+        </dl>
+
+
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    <fieldset class="rounded">
+        <h2 class="fs-title">When you are faced with a major financial decision, are you more concerned about the
+            possible losses or the
+            possible gains?</h2>
+
+        <dl class="radio-list-left">
+            <dd>
+                <input type="radio" name="pq7" id="pq7-1" value="1">
+                <label for="pq7-1">Investment A: 0% Loss 5% Gain</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq7" id="pq7-2" value="2">
+                <label for="pq7-2">Investment B: -1% Loss 8% Gain</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq7" id="pq7-3" value="3">
+                <label for="pq7-3">Investment C: -5% Loss 15% Gain</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq7" id="pq7-4" value="4">
+                <label for="pq7-4">Investment D: -10% Loss 20% Gain</label>
+            </dd>
+        </dl>
+
+
+
+
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+    <fieldset class="rounded">
+        <h2 class="fs-title">How would you classify your current financial situation?</h2>
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq9" id="pq9-1" value="2">
+                <label for="pq9-1">Some savings and little or no debt</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq9" id="pq9-2" value="4">
+                <label for="pq9-2">No savings and significant debt</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq9" id="pq9-3" value="3">
+                <label for="pq9-3">little savings and a fair amount of debt
+                </label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq9" id="pq9-4" value="1">
+                <label for="pq9-4">Significant savings and little or no debt</label>
+            </dd>
+        </dl>
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+
+    <fieldset class="rounded">
+        <h2 class="fs-title">With the revenue generated from your portfolio (investments or assets), you plan to:</h2>
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq10" id="pq10-1" value="3">
+                <label for="pq10-1">Save a small portion and reinvest large</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq10" id="pq10-2" value="2">
+                <label for="pq10-2">Save a portion of it and reinvest small</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq10" id="pq10-3" value="1">
+                <label for="pq10-3">Save all of it</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq10" id="pq10-4" value="4">
+                <label for="pq10-4">Reinvest all of it</label>
+            </dd>
+        </dl>
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+    </fieldset>
+
+
+    <fieldset class="rounded">
+        <h2 class="fs-title">Which of the following best describes your financial goals?</h2>
+        <dl class="radio-list-left">
+
+            <dd>
+                <input type="radio" name="pq11" id="pq11-2" value="1">
+                <label for="pq11-2">To keep the money I have invested safe from short-term losses or available for
+                    short-term
+                    needs</label>
+            </dd>
+
+            <dd>
+                <input type="radio" name="pq11" id="pq11-4" value="2">
+                <label for="pq11-4">To generate a steady income from my investments and I am less concerned about
+                    growing the
+                    value of my investments</label>
+            </dd>
+            <dd>
+                <input type="radio" name="pq11" id="pq11-1" value="3">
+                <label for="pq11-1">To generate some income with some opportunity for the investments to grow in
+                    value</label>
+            </dd>
+
+            <dd>
+                <input type="radio" name="pq11" id="pq11-3" value="4">
+                <label for="pq11-3">To create high growth income by accepting greater and sometimes dramatic
+                    fluctuations in the
+                    value of your investments</label>
+            </dd>
+
+        </dl>
+
+        <button type="button" name="previous"
+            class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2 m-md-0 my-2">Previous</button>
+        <button type="submit" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Submit</button>
+    </fieldset>
+</form>
+{% include 'header_footer/questionnaire_footer.html' %}
